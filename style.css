@@ -1,0 +1,263 @@
+:root{
+    /*--leftG1Symbol:300px;         
+    --topG1Symbol:350px;
+
+    --leftCPUSymbol: 570px;
+    --topCPUSymbol:130px;*/
+    --leftStart:0px;
+    --topStart:0px;
+
+    --leftEnd:0px;
+    --topEnd:0px;
+
+    --barraStart:0px;
+    --barraEnd:0px;
+}
+
+#campoLotta{
+    width:900px;
+    height:500px;
+    border: 1px darkred solid;
+    position: absolute;
+}
+
+#campoMD{
+    width:900px;
+    height: 125px;
+    border: 1px solid darkgreen;
+    position:absolute;
+    top: 510px;
+}
+
+#campoMosse{
+    width:899px;
+    height: 124px;
+    background-color: white;
+    top:511px;
+}
+
+#campoDidascalie{
+    width:899px;
+    height: 124px;
+    background-color: black;
+    top:511px;
+}
+
+#campoTesto{
+    width: 450px;
+    height: 627px;
+    border: 1px solid darkblue;
+    position:absolute;
+    left: 910px;
+}
+
+#spriteG1{
+    width: 300px;
+    height:300px;
+    position:absolute;
+    top:250px;
+    left:50px;
+}
+
+#spriteCPU{
+    width:280px;
+    height:280px;
+    position:absolute;
+    left:550px;
+}
+
+#infoG1{
+    width:200px;
+    height:100px;
+    border: 1px solid black;
+    background-color: yellow;
+    position: absolute;
+    border-radius: 10px;
+    top: 350px;
+    left: 500px;
+}
+
+#infoCPU{
+    width:200px;
+    height:100px;
+    border: 1px solid black;
+    background-color: yellow;
+    position: absolute;
+    border-radius: 10px;
+    top: 30px;
+    left: 150px;
+}
+
+#contenitoreBarra{
+    width:170px;
+    height:10px;
+    border-radius: 10px;
+    border:1px solid black;
+    background-color: black;
+    position:absolute;
+    top:40px;
+    left:15px;
+}
+
+#barraSaluteG1{
+    width: 170px;
+    height:10px;
+    border-radius: 10px;
+    background-color: green;
+}
+#barraSaluteCPU{
+    width: 170px;
+    height:10px;
+    border-radius: 10px;
+    background-color: green;
+}
+
+#pulsanteMossa{
+    position:absolute;
+    top:50px;
+}
+
+#Bianco{
+    width:899px;
+    height: 124px;
+    background-color: white;
+}
+
+#simboloAttacco{
+    width:70px;
+    height:70px;
+    position: absolute;
+}
+
+@keyframes simboloAttacco{
+    0%{
+        left: var(--leftStart);
+        top: var(--topStart);
+    }
+    100%{
+        left: var(--leftEnd);
+        top: var(--topEnd);
+    }
+}
+
+.animazioneSimbolo{
+    animation: simboloAttacco 1.5s linear;
+}
+
+@keyframes colpito{
+    0%{
+        opacity:1;
+    }
+    10%{
+        opacity:0;
+    }
+    15%{
+        opacity:1;
+    }
+    20%{
+        opacity:0;
+    }
+    30%{
+        opacity:0;
+    }
+    35%{
+        opacity:1;
+    }
+    40%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+
+}
+
+.animazioneColpito{
+    animation: linear 0.5s colpito;
+}
+
+@keyframes decrementa{
+    0%{
+        width: var(--barraStart);
+    }
+    100%{
+        width: var(--barraEnd);
+    }
+}
+
+.animazioneDecrementa{
+    animation: decrementa 2s linear;
+}
+
+@keyframes diminuzione{
+    0%{
+        background-color:white;
+    }
+    50%{
+        background-color: red;
+    }
+    100%{
+        background-color: white;
+    }
+}
+
+.animazioneDiminuzione{
+    animation: diminuzione 2s linear;
+}
+
+@keyframes veleno{
+    0%{
+        background-color: white;
+    }
+    50%{
+        background-color: violet;
+    }
+    100%{
+        background-color: white;
+    }
+}
+
+.animazioneVeleno{
+    animation: veleno 2s linear;
+}
+
+@keyframes bruciatura{
+    0%{
+        background-color: white;
+    }
+    50%{
+        background-color: red;
+    }
+    100%{
+        background-color: white;
+    }
+}
+
+.animazioneBruciatura{
+    animation: bruciatura 2s linear;
+}
+
+@keyframes paralisi{
+    0%{
+        background-color: white;
+    }
+    50%{
+        background-color: yellow;
+    }
+    100%{
+        background-color: white;
+    }
+}
+
+.animazioneParalisi{
+    animation: paralisi 2s linear;
+}
